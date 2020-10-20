@@ -1,0 +1,220 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+.analog {
+	width: 15em;
+	height: 15em;
+	border-radius: 50%;
+	background-color: aliceblue;
+	border: 5px solid pink;
+	position: relative;
+	text-align: center;
+	z-index: -1;
+}
+
+@media only screen and (max-width: 1112px) {
+	.analog {
+		width: 10em;
+		height: 10em;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.analog {
+		width: 12em;
+		height: 12em;
+		margin: 0 auto;
+	}
+}
+
+.analog .number {
+	--rotation: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transform: rotate(var(--rotation));
+	font-size: 1.5rem;
+}
+.analog .number1 {
+	--rotation: 30deg;
+}
+.analog .number2 {
+	--rotation: 60deg;
+}
+.analog .number3 {
+	--rotation: 90deg;
+}
+.analog .number4 {
+	--rotation: 120deg;
+}
+.analog .number5 {
+	--rotation: 150deg;
+}
+.analog .number6 {
+	--rotation: 180deg;
+}
+.analog .number7 {
+	--rotation: 210deg;
+}
+.analog .number8 {
+	--rotation: 240deg;
+}
+.analog .number9 {
+	--rotation: 270deg;
+}
+.analog .number10 {
+	--rotation: 300deg;
+}
+.analog .number11 {
+	--rotation: 330deg;
+}
+.analog .number12 {
+	--rotation: 360deg;
+}
+.analog .hand {
+	--rotation: 0;
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	background-color: black;
+	border: 1px solid white;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	z-index: 10;
+	transform: translate(50%) rotate(calc(var(--rotation) * 1deg));
+	transform-origin: bottom;
+}
+.analog::after {
+	content: "";
+	position: absolute;
+	background-color: black;
+	z-index: 11;
+	width: 15px;
+	height: 15px;
+	top: 47%;
+	left: 49%;
+	transform: translate(-50% -50%);
+	border-radius: 50%;
+}
+.analog .hand.second {
+	width: 3px;
+	height: 45%;
+	background-color: red;
+}
+.analog .hand.minute {
+	width: 7px;
+	height: 40%;
+	background-color: black;
+}
+.analog .hand.hour {
+	width: 10px;
+	height: 35%;
+	background-color: black;
+}
+
+/* Mobile phone - Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.clocks {
+		display: block;
+	}
+	.clock{
+		height: 400px;
+		margin: 40px;
+		border:1px solid white;
+		border-radius: 1em;
+		padding: 2px;
+		min-width: 15em;
+	}
+}
+
+/* iPad portrait - Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px)  {
+	.clocks {
+		display: inline-flex;
+		margin-left: 10px;
+	}
+	.clock{
+		height: 400px;
+		padding: 20px;
+		margin: 20px;
+		border:1px solid white;
+		border-radius: 1em;
+	}
+}
+
+/* iPad landscape - Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 760px) and (orientation : landscape) {
+	.clocks {
+		display: inline-flex;
+		margin-left: 6%;
+	}
+	.clock {
+		height: 400px;
+		padding: 35px;
+		margin: 30px;
+		border:1px solid white;
+		border-radius: 1em;
+	}
+}
+
+/* iPad Pro portrait */
+@media only screen and (min-width: 1024px) {
+	.clocks {
+		display: inline-flex;
+		margin-left: 8%;
+	}
+	.clock{
+		height: 400px;
+		padding: 30px;
+		margin: 30px;
+		border:1px solid white;
+		border-radius: 1em;
+	}
+}
+
+/* iPad Pro landscape */
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+	.clocks {
+		display: inline-flex;
+		margin-left: 10%;
+	}
+	.clock{
+		height: 400px;
+		padding: 30px;
+		margin: 30px;
+		border:1px solid white;
+		border-radius: 1em;
+	}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1370px) {
+	.clocks{
+		display: inline-flex;
+		/* justify-content: space-evenly; */
+		margin: 5%;
+	}
+	
+	.clock{
+		height:450px;
+		padding:50px;
+		margin:50px;
+		border:1px solid white;
+		border-radius: 1em;
+		/* min-width: 21em; */
+	}
+}
+
+
+/* @media only screen and (max-width: 1112px) {
+
+}
+
+@media only screen and (max-width: 600px) {
+
+} */
